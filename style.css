@@ -1,6 +1,21 @@
+html {
+  overflow-x: hidden;
+}
+
 body {
   padding: 0px;
   margin: 0px;
+  color: white;
+  background-color: black;
+}
+
+body p {
+  font-family: "Urbanist", sans-serif;
+}
+
+body h1,
+h2 {
+  font-family: "Bebas Neue", sans-serif;
 }
 
 #header-bar {
@@ -11,7 +26,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0px 10px;
-  background-color: blue;
+  background-color: grey;
 }
 
 #links {
@@ -24,11 +39,43 @@ body {
 #front-cover {
   width: 100vw;
   height: 100vh;
-  background-color: aqua;
+  background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+}
+
+#front-cover div {
+  padding: 30px;
+  width: 80vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#front-cover div div {
+  height: 50vh;
+}
+
+#front-cover div > * {
+  padding: 0px;
+  margin: 0px;
+}
+
+#front-cover div button {
+  width: 70px;
+}
+
+#front-cover h1 {
+  font-size: 100px;
+}
+
+#front-cover #subheading {
+  font-size: 30px;
 }
 
 #start-info {
