@@ -10,12 +10,13 @@ body {
 }
 
 body p {
-  font-family: "Urbanist", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body h1,
 h2 {
   font-family: "Bebas Neue", sans-serif;
+  letter-spacing: -2px;
 }
 
 #header-bar {
