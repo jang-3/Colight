@@ -15,8 +15,9 @@ body p {
 
 body h1,
 h2 {
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: -2px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 #header-bar {
@@ -27,7 +28,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   padding: 0px 10px;
-  background-color: grey;
+  background-color: rgb(50, 50, 50);
 }
 
 #links {
@@ -67,12 +68,28 @@ h2 {
   margin: 0px;
 }
 
+/*
 #front-cover div button {
-  width: 70px;
+  width: 130px;
+  height: 40px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+#front-cover div p {
+  margin-top: 30px;
 }
 
 #front-cover h1 {
   font-size: 100px;
+  letter-spacing: -2px;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 #front-cover #subheading {
@@ -92,7 +109,8 @@ h2 {
   flex-direction: column;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
+  width: 60vw;
 }
 
 #start-info-img {
