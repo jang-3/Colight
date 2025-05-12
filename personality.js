@@ -1,6 +1,7 @@
-let allChoices = [];
+let allQns = [];
 let axis1 = 0;
 let axis2 = 0;
+allQIndex = 0;
 async function loadQuestions() {
   const res = await fetch("questions.md");
   const mdText = await res.text();
@@ -48,9 +49,25 @@ function renderQuestion(container, question, choices, index, qType) {
   });
 
   container.appendChild(div);
+  allQns.push(div);
+  allQns[0]?.classList.add("active"); // Show first question by default
+}
+
+function traverseQuestions(direction) {
+  if (direction === "front" && allQIndex < allQns.length - 1) {
+    allQIndex += 1;
+  } else if (direction === "back" && allQIndex > 0) {
+    allQIndex -= 1;
+  }
+
+  allQns.forEach((question, index) => {
+    question.classList.toggle("active", index === allQIndex);
+  });
 }
 
 function submitAnswers() {
+  let quadra = "Unknown";
+
   const results = [];
   const questionDivs = document.querySelectorAll(`.question`);
 
@@ -65,7 +82,7 @@ function submitAnswers() {
       const choiceIndex = parseInt(selectedValue);
 
       // ✅ Score using 4-option scale
-      const scoreMap = [-2, -1, 1, 2];
+      const scoreMap = [-1.75, -1, 1, 1.75];
       const score = scoreMap[choiceIndex] ?? 0;
 
       if (questionClass.contains("axis1")) {
@@ -80,10 +97,20 @@ function submitAnswers() {
       answer: selected ? selected.value : "No answer",
     });
   });
+  if (Math.abs(axis1) <= 1 && Math.abs(axis2) <= 1) {
+    quadra = "hero";
+  } else if (axis1 > 0) {
+    quadra = axis2 > 0 ? "Indifferent" : "Overthinker";
+  } else if (axis1 < 0) {
+    quadra = axis2 > 0 ? "Clueless" : "Impulsive";
+  }
 
   console.log("Results:", results);
   console.log(`Axis 1: ${axis1}, Axis 2: ${axis2}`);
-  alert(`Axis 1: ${axis1}   Axis 2: ${axis2}`);
+  alert(`Axis 1: ${axis1}   Axis 2: ${axis2} result: ${quadra}`);
+
+  axis1 = 0;
+  axis2 = 0;
 }
 
 loadQuestions();

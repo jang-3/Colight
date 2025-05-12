@@ -96,6 +96,15 @@ h2 {
   font-size: 30px;
 }
 
+/* In personality*/
+.question {
+  display: none;
+}
+.question.active {
+  display: block;
+}
+/* end of personality*/
+
 #start-info {
   display: flex;
   justify-content: space-between;
