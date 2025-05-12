@@ -26,7 +26,6 @@ async function loadQuestions() {
     } else if (line.startsWith("changeType")) {
       qType = "axis2";
     }
-    allChoices.push(choices);
   }
   // Render last question
   if (question && choices.length > 0) {
@@ -43,7 +42,7 @@ function renderQuestion(container, question, choices, index, qType) {
     const id = `q${index}_a${i}`;
     div.innerHTML += `
         <label for="${id}">
-          <input type="radio" name="q${index}" value="${choice}" id="${id}">
+          <input type="radio" name="q${index}" value="${i}" id="${id}">
           ${choice}
         </label><br>`;
   });
@@ -63,9 +62,7 @@ function submitAnswers() {
 
     if (selected) {
       const selectedValue = selected.value;
-      const choices = allChoices[index];
-
-      const choiceIndex = choices.findIndex((c) => c === selectedValue);
+      const choiceIndex = parseInt(selectedValue);
 
       // ✅ Score using 4-option scale
       const scoreMap = [-2, -1, 1, 2];
