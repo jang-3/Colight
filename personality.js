@@ -42,9 +42,9 @@ function renderQuestion(container, question, choices, index, qType) {
   choices.forEach((choice, i) => {
     const id = `q${index}_a${i}`;
     div.innerHTML += `
-        <label for="${id}">
-          <input type="radio" name="q${index}" value="${i}" id="${id}">
-          ${choice}
+        <label for="${id}" class="quizOptions" >
+          <input type="radio" name="q${index}" value="${i}" id="${id}" hidden>
+          <span>${choice}</span>
         </label><br>`;
   });
 
@@ -81,7 +81,6 @@ function submitAnswers() {
       const selectedValue = selected.value;
       const choiceIndex = parseInt(selectedValue);
 
-      // ✅ Score using 4-option scale
       const scoreMap = [-1.75, -1, 1, 1.75];
       const score = scoreMap[choiceIndex] ?? 0;
 
@@ -109,8 +108,11 @@ function submitAnswers() {
   console.log(`Axis 1: ${axis1}, Axis 2: ${axis2}`);
   alert(`Axis 1: ${axis1}   Axis 2: ${axis2} result: ${quadra}`);
 
+  sessionStorage.setItem("axis1", axis1);
+  sessionStorage.setItem("axis2", axis2);
   axis1 = 0;
   axis2 = 0;
+  window.location.href = `${window.location.origin}/result.html?result=${quadra}`;
 }
 
 loadQuestions();

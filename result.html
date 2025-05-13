@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Personality Test</title>
+    <title>Your Results:</title>
     <link rel="stylesheet" href="personality.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,14 +12,20 @@
     />
   </head>
   <body>
-    <div id="page-container">
-      <div id="quiz-container"></div>
-      <div id="qnButtons">
-        <button onclick="traverseQuestions('front')">Next</button>
-        <button onclick="traverseQuestions('back')">Back</button>
-        <button onclick="submitAnswers()">Check</button>
-      </div>
+    <div>
+      <h3>Your type is...</h3>
+      <h1 id="result-text">The</h1>
     </div>
-    <script src="personality.js"></script>
+    <div>
+      <p id="comp1"></p>
+      <div id="result-container">
+        <div id="value1"></div>
+      </div>
+      <p id="comp2"></p>
+    </div>
+    <div id="result-container">
+      <div id="value2"></div>
+    </div>
+    <script src="result.js"></script>
   </body>
 </html>
