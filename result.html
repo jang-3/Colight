@@ -12,20 +12,31 @@
     />
   </head>
   <body>
-    <div>
-      <h3>Your type is...</h3>
-      <h1 id="result-text">The</h1>
-    </div>
-    <div>
-      <p id="comp1"></p>
-      <div id="result-container">
-        <div id="value1"></div>
+    <div id="result-page">
+      <div id="result-title">
+        <h3>Your type is...</h3>
+        <h1 id="result-text">The</h1>
       </div>
-      <p id="comp2"></p>
+      <div class="subScores">
+        <div class="divs sidebox">
+          <p id="comp1"></p>
+          <p id="comp3"></p>
+        </div>
+        <div class="divs">
+          <div class="result-container">
+            <div id="value1"></div>
+          </div>
+          <div class="result-container">
+            <div id="value2"></div>
+          </div>
+        </div>
+        <div class="divs sidebox">
+          <p id="comp2"></p>
+          <p id="comp4"></p>
+        </div>
+      </div>
     </div>
-    <div id="result-container">
-      <div id="value2"></div>
-    </div>
+
     <script src="result.js"></script>
   </body>
 </html>
