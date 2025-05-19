@@ -65,7 +65,7 @@ h2 {
   padding: 0px;
   margin: 0px;
   background-image: linear-gradient(rgba(26, 6, 6, 0.8), rgba(26, 6, 6, 0.8)),
-    url("/Images/domestic-violence-bed-.jpg");
+    url("domestic-violence-bed-.jpg");
   background-size: cover; /* ensures the image fills without distortion */
   background-position: center; /* centers the image */
   background-repeat: no-repeat; /* prevents tiling */
