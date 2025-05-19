@@ -170,3 +170,8 @@ h2 {
   margin: 0px;
   color: brown;
 }
+
+#mission {
+  width: 100vw;
+  height: 30vh;
+}
