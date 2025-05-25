@@ -147,3 +147,11 @@ input[type="radio"] {
   align-items: center;
   justify-content: center;
 }
+
+#char-img {
+  width: 300px;
+  min-height: 140px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
