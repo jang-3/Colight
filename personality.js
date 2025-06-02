@@ -1,7 +1,8 @@
 let allQns = [];
 let axis1 = 0;
 let axis2 = 0;
-allQIndex = 0;
+let allQIndex = 0;
+
 async function loadQuestions() {
   const res = await fetch("questions.md");
   const mdText = await res.text();
@@ -13,39 +14,48 @@ async function loadQuestions() {
   let choices = [];
   let qIndex = 0;
   let qType = "axis1";
+  let embedUrl = 0;
 
   for (const line of lines) {
     if (line.startsWith("### Q:")) {
-      // Render previous question if exists
+      // Render previous question if it exists
       if (question && choices.length > 0) {
-        renderQuestion(container, question, choices, qIndex++, qType);
+        renderQuestion(container, question, choices, qIndex++, qType, embedUrl);
         choices = [];
+        embedUrl = 0; // reset for next question
       }
       question = line.replace("### Q:", "").trim();
     } else if (line.startsWith("-")) {
       choices.push(line.replace("-", "").trim());
     } else if (line.startsWith("changeType")) {
       qType = "axis2";
+    } else if (line.startsWith("$embed")) {
+      embedUrl = line.replace("$embed", "").trim();
     }
   }
+
   // Render last question
   if (question && choices.length > 0) {
-    renderQuestion(container, question, choices, qIndex++);
+    renderQuestion(container, question, choices, qIndex++, qType, embedUrl);
   }
 }
 
-function renderQuestion(container, question, choices, index, qType) {
+function renderQuestion(container, question, choices, index, qType, embedUrl) {
   const div = document.createElement("div");
   div.classList.add("question");
-  div.innerHTML = `<p class="${qType}">${question}</p>`;
-
+  if (embedUrl && embedUrl !== 0) {
+    div.innerHTML += `
+      <img class="gifshow" src="${embedUrl}" alt="Embedded media">
+    `;
+  }
+  div.innerHTML += `<h4 class="${qType} question-ask">${question}</h4>`;
   choices.forEach((choice, i) => {
     const id = `q${index}_a${i}`;
     div.innerHTML += `
-        <label for="${id}" class="quizOptions" >
-          <input type="radio" name="q${index}" value="${i}" id="${id}" hidden>
-          <span>${choice}</span>
-        </label><br>`;
+      <label for="${id}" class="quizOptions">
+        <input type="radio" name="q${index}" value="${i}" id="${id}" hidden>
+        <span>${choice}</span>
+      </label><br>`;
   });
 
   container.appendChild(div);
@@ -63,6 +73,11 @@ function traverseQuestions(direction) {
   allQns.forEach((question, index) => {
     question.classList.toggle("active", index === allQIndex);
   });
+
+  const isLastQuestion = allQIndex === allQns.length - 1;
+  document.getElementById("checkbtn").style.display = isLastQuestion
+    ? "block"
+    : "none";
 }
 
 function submitAnswers() {
@@ -73,14 +88,13 @@ function submitAnswers() {
 
   questionDivs.forEach((div, index) => {
     const selected = div.querySelector(`input[name="q${index}"]:checked`);
-    const questionText =
-      div.querySelector("p")?.textContent || `Question ${index + 1}`;
-    const questionClass = div.querySelector("p")?.classList;
+    const questionEl = div.querySelector("h4");
+    const questionText = questionEl?.textContent || `Question ${index + 1}`;
+    const questionClass = questionEl?.classList;
 
     if (selected) {
       const selectedValue = selected.value;
       const choiceIndex = parseInt(selectedValue);
-
       const scoreMap = [-1.75, -1, 1, 1.75];
       const score = scoreMap[choiceIndex] ?? 0;
 
@@ -96,6 +110,8 @@ function submitAnswers() {
       answer: selected ? selected.value : "No answer",
     });
   });
+
+  // Determine quadrant
   if (Math.abs(axis1) <= 1 && Math.abs(axis2) <= 1) {
     quadra = "Hero_Holland";
   } else if (axis1 > 0) {

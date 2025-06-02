@@ -5,6 +5,8 @@
 - Message them and ask, "I’ve noticed you seem a bit off. If you want to talk about it, I’m here."
 - Call Jamie and say, "I’m really worried about you. Do you want to tell me what’s going on?"
 
+$embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1748872975/example_sd2zjm.gif
+
 ### Q: You notice Jamie seems more withdrawn lately, and you spot a bruise on their arm. What would you do?
 
 - Wait for Jamie to bring it up themselves. If they want to talk, they will.

@@ -10,15 +10,10 @@ h3 {
   font-weight: 400;
 }
 
-.question {
-  display: none;
-}
-.question.active {
-  display: block;
-}
-
 #page-container {
+  margin-top: 30px;
   height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,8 +21,8 @@ h3 {
 }
 
 .question {
-  width: 50vw;
-  height: 50vh;
+  width: 100vw;
+  height: 100vh;
   font-family: "Inter", sans-serif;
   display: none;
 }
@@ -35,9 +30,8 @@ h3 {
 #quiz-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 100px;
   width: 100vw;
-  height: auto;
+  height: 85vh;
   align-items: center;
 }
 
@@ -45,17 +39,40 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 50vw;
+  height: 100vh;
   justify-content: center;
 }
+
 .quizOptions span {
   display: inline-flex;
   padding: 15px 20px;
-  margin: 3px;
   min-width: 500px;
+  width: 500px;
+  height: 30px;
   border-radius: 10px;
-  background: #ff8000;
+  background-color: white;
+  border: 5px solid rgb(204, 204, 204);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: black;
   cursor: pointer;
+}
+
+.gifshow {
+  margin-top: 30px;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.question-ask {
+  display: flex;
+  margin: none;
+  margin-bottom: 5vh;
+  font-weight: 400;
+  font-size: 17px;
 }
 
 input[type="radio"] {
@@ -68,7 +85,7 @@ input[type="radio"] {
   align-items: center;
   width: 30vw;
   height: 30px;
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 30px;
 }
 
@@ -81,20 +98,23 @@ input[type="radio"] {
   border: none;
   font-size: 15px;
   width: 30px;
-  margin-top: 30px;
   background-color: #dcdcdc;
   padding: 20px 50px;
   margin-left: 5px;
   margin-right: 5px;
 }
 
+#checkbtn {
+  display: none;
+}
+
 #qnButtons button:hover {
-  background-color: #ff8000;
+  background-color: rgb(204, 204, 204);
 }
 
 .quizOptions input[type="radio"]:checked + span {
-  color: white;
-  background-color: #c54949;
+  color: black;
+  background-color: rgb(204, 204, 204);
   padding: 15px 20px;
   border-radius: 10px;
 }

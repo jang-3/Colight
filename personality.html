@@ -13,11 +13,13 @@
   </head>
   <body>
     <div id="page-container">
-      <div id="quiz-container"></div>
+      <div id="quiz-container">
+        <div id="gif-container"></div>
+      </div>
       <div id="qnButtons">
         <button onclick="traverseQuestions('front')">Next</button>
         <button onclick="traverseQuestions('back')">Back</button>
-        <button onclick="submitAnswers()">Check</button>
+        <button id="checkbtn" onclick="submitAnswers()">Submit</button>
       </div>
     </div>
     <script src="personality.js"></script>
