@@ -8,10 +8,11 @@ html {
   box-sizing: border-box;
 }
 
-a {
+.link {
   color: rgb(255, 125, 3);
   text-decoration: none; /* Remove underline (optional) */
   font-family: "Inter", sans-serif;
+  transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -40,12 +41,13 @@ body h5 {
 body h1,
 h2 {
   font-family: "Inter", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 50px;
   margin: none;
 }
 
 #header-bar {
+  z-index: 10;
   position: sticky;
   top: 0;
   overflow: hidden;
@@ -55,6 +57,7 @@ h2 {
   padding: 0px 10px;
   height: 70px;
   background-color: rgb(0, 0, 0);
+  transition: all 0.3s ease-in-out;
 }
 
 #links {
@@ -186,6 +189,7 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  margin: 70px;
 }
 
 .statistics {
@@ -194,12 +198,12 @@ h2 {
   align-items: center;
   justify-content: center;
   padding: 15px;
-  background-color: rgb(28, 8, 8);
   width: 230px;
   height: 250px;
   border-radius: 15px;
   font-size: 20px;
   margin: 10px;
+  border: 5px solid rgb(41, 41, 41);
 }
 
 .statistics h1 {
@@ -212,12 +216,12 @@ h2 {
 
 .statistics p {
   margin: 0px;
-  color: brown;
+  color: rgb(181, 181, 181);
 }
 
 .extra-stats {
   display: flex;
-  background-color: rgb(28, 8, 8);
+  border: 5px solid rgb(41, 41, 41);
   border-radius: 20px;
   height: 120px;
   width: 65vw;
@@ -234,19 +238,18 @@ h2 {
   min-width: 90px;
   height: 90px;
   min-height: 70px;
-  background-color: rgb(84, 16, 16);
   border-radius: 10px;
   margin-right: 30px;
 }
 
 .extra-stats h1 {
   font-size: 30px;
-  color: rgb(255, 125, 3);
+  color: white;
 }
 
 .extra-stats h5 {
   font-size: 25px;
-  color: brown;
+  color: rgb(255, 125, 3);
   font-weight: normal;
   font-family: "Inter", sans-serif;
   text-align: left;
@@ -259,6 +262,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(255, 255, 255);
+  margin-top: 100px;
 }
 #mission div {
   width: 80vw;
@@ -273,21 +278,21 @@ h2 {
 }
 
 #mission div h1 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 50px;
-  color: white;
+  color: black;
 }
 
 #mission div h4 {
   font-size: 30px;
   font-weight: normal;
   font-family: "Inter", sans-serif;
-  color: rgb(255, 125, 3);
+  color: rgb(43, 43, 43);
 }
 
 #mission div h5 {
   font-size: 25px;
-  color: rgb(255, 125, 3);
+  color: rgb(43, 43, 43);
   font-weight: normal;
   font-family: "Inter", sans-serif;
   text-align: left;
@@ -298,11 +303,11 @@ h2 {
 #cta-container {
   width: 100vw;
   height: 40vw;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 #personality-cta {
   width: 90vw;
   height: 60vh;
@@ -310,14 +315,40 @@ h2 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: rgb(255, 125, 3);
+  background-color: white;
+  background-image: url("PersonalityCTABG.png");
+  background-size: cover;
   border-radius: 15px;
+  border: 5px solid rgb(204, 204, 204);
+  box-shadow: inset 0 4px 10px rgba(255, 255, 255, 0.3);
 }
 
 #personality-cta h5 {
-  color: rgb(255, 215, 177);
+  color: black;
   font-size: 30px;
 }
+
+#downarrow {
+  width: 80px;
+  height: 80px;
+  transform: translateY(20vh);
+  align-self: center;
+  justify-self: center;
+}
+
+#arrow-div {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#personality-cta h1 {
+  color: black;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
 #personality-cta button {
   width: 250px;
   height: 80px;
@@ -327,7 +358,7 @@ h2 {
   font-size: 20px;
   outline: none;
   border: none;
-  background-color: brown;
+  background-color: black;
   color: white;
 }
 

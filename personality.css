@@ -26,21 +26,32 @@ h3 {
 }
 
 .question {
-  width: 30vw;
+  width: 50vw;
   height: 50vh;
   font-family: "Inter", sans-serif;
+  display: none;
 }
 
 #quiz-container {
+  display: flex;
+  justify-content: center;
   margin-bottom: 100px;
-  width: 30vw;
+  width: 100vw;
   height: auto;
+  align-items: center;
 }
 
+.question.active {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 .quizOptions span {
-  display: inline-block;
+  display: inline-flex;
   padding: 15px 20px;
-  margin: 8px;
+  margin: 3px;
+  min-width: 500px;
   border-radius: 10px;
   background: #ff8000;
   color: black;
@@ -75,7 +86,6 @@ input[type="radio"] {
   padding: 20px 50px;
   margin-left: 5px;
   margin-right: 5px;
-  transform: ;
 }
 
 #qnButtons button:hover {
