@@ -31,6 +31,13 @@ body {
   flex-direction: column;
 }
 
+#typesOfDV {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 hr {
   transition: all 0.3s ease-in-out;
 }
@@ -118,10 +125,25 @@ h2 {
 }
 
 .vertical-line {
-  width: 1px;
+  width: 5px;
   height: 200px; /* Or any height you want */
   background-color: rgb(255, 125, 3);
   margin-bottom: 30px;
+  transition: all 0.3 ease-in-out;
+  animation-delay: 3s;
+  animation: forwards lineGo 3s;
+}
+
+@keyframes lineGo {
+  0% {
+    height: 10px;
+    opacity: 0;
+  }
+
+  100% {
+    height: 500px;
+    opacity: 1;
+  }
 }
 
 #definition h1 {
@@ -193,4 +215,31 @@ hr {
 
 .subtypes p {
   color: rgb(255, 125, 3);
+}
+
+#moreStats {
+  width: 100vw;
+  height: 130vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: all 0.3s ease-in-out;
+}
+
+#surrpise {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#surprise h1 {
+  font-size: 100px;
+  color: black;
+}
+
+#surprise p {
+  color: black;
 }
