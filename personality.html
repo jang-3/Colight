@@ -17,9 +17,11 @@
         <div id="gif-container"></div>
       </div>
       <div id="qnButtons">
-        <button onclick="traverseQuestions('front')">Next</button>
+        <button id="nextbtn" onclick="traverseQuestions('front')">Next</button>
+        <button id="checkbtn" style="display: none" onclick="submitAnswers()">
+          Submit
+        </button>
         <button onclick="traverseQuestions('back')">Back</button>
-        <button id="checkbtn" onclick="submitAnswers()">Submit</button>
       </div>
     </div>
     <script src="personality.js"></script>

@@ -76,8 +76,12 @@ function traverseQuestions(direction) {
 
   const isLastQuestion = allQIndex === allQns.length - 1;
   document.getElementById("checkbtn").style.display = isLastQuestion
-    ? "block"
+    ? "flex"
     : "none";
+
+  document.getElementById("nextbtn").style.display = isLastQuestion
+    ? "none"
+    : "flex";
 }
 
 function submitAnswers() {
