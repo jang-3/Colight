@@ -96,11 +96,12 @@ hr {
 
 .as-section {
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  margin-bottom: 20px;
 }
 
 #abt-us {
@@ -116,5 +117,6 @@ hr {
   font-family: "Inter", sans-serif;
   text-align: center;
   margin-top: 20px;
+  width: 80vw;
   color: rgb(181, 181, 181);
 }
