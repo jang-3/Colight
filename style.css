@@ -318,6 +318,7 @@ h2 {
   background-color: white;
   background-image: url("PersonalityCTABG.png");
   background-size: cover;
+  background-position: bottom;
   border-radius: 15px;
   border: 5px solid rgb(204, 204, 204);
   box-shadow: inset 0 4px 10px rgba(255, 255, 255, 0.3);
@@ -366,4 +367,162 @@ h2 {
   outline: none;
   border: none;
   background-color: rgb(221, 50, 50);
+}
+
+/* Add this to the bottom of your existing CSS */
+
+@media screen and (max-width: 768px) {
+  #header-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  #links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  #front-cover h1 {
+    font-size: 50px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  #start-info {
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 30px;
+  }
+
+  #start-info-content {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  #start-info-img {
+    width: 80%;
+    max-width: 300px;
+    padding: 0 10px;
+  }
+
+  #statistics-container {
+    flex-direction: column;
+    margin: 20px;
+    padding: 0 10px;
+  }
+
+  .statistics {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .extra-stats div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .extra-stats h5 {
+    text-align: center;
+  }
+
+  .extra-stats {
+    flex-direction: column;
+    height: auto;
+    width: 77vw;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #mission {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  #mission div {
+    height: auto;
+    padding: 20px;
+  }
+
+  #cta-container {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  #personality-cta {
+    height: auto;
+    padding: 30px 20px;
+  }
+
+  #personality-cta h5,
+  #personality-cta h1 {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  #downarrow {
+    width: 50px;
+    height: 50px;
+    transform: translateY(10vh);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body h1,
+  h2 {
+    font-size: 35px;
+    padding: 0 20px;
+  }
+
+  #front-cover div div h1 {
+    font-size: 65px;
+    letter-spacing: 0px;
+  }
+
+  body h5 {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  #front-cover h1 {
+    font-size: 35px;
+    padding: 0 10px;
+  }
+
+  #statistics-section h4 {
+    font-size: 20px;
+    padding: 0 10px;
+  }
+
+  .statistics h1,
+  .extra-stats h1 {
+    font-size: 24px;
+  }
+
+  #start-info-content {
+    padding: none;
+  }
+
+  .extra-stats h5 {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  #personality-cta button {
+    width: 200px;
+    height: 60px;
+    font-size: 16px;
+  }
+
+  #mission div h1 {
+    font-size: 40px;
+  }
 }
