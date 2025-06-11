@@ -219,20 +219,26 @@ hr {
 
 #moreStats {
   width: 100vw;
-  height: 130vh;
+  height: auto;
+  padding-top: 50px;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transition: all 0.3s ease-in-out;
+  margin-top: 100px;
 }
 
-#surrpise {
+#surprise {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 200px;
+  width: 100vw;
+  padding-top: 200px;
+  padding-bottom: 100px;
 }
 
 #surprise h1 {
@@ -242,4 +248,75 @@ hr {
 
 #surprise p {
   color: black;
+}
+
+#tiersOfDV {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tier {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 20px;
+  padding: 30px;
+  background-color: black;
+  border: 5px solid rgb(204, 204, 204);
+  border-radius: 30px;
+  width: 550px;
+  height: 350px;
+}
+
+.tier h3 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: rgb(255, 125, 3);
+}
+
+.labelTier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 80px;
+  border-radius: 50px;
+  background-color: white;
+  transform: translateY(60px);
+}
+
+.labelTier h5 {
+  color: black;
+}
+
+.tier p {
+  color: rgb(255, 255, 255);
+}
+
+.tierWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#lists li {
+  color: black;
+  font-family: "Inter", sans-serif;
+  margin: none;
+  font-size: 30px;
+  margin: 60px;
+}
+
+#lists h4 {
+  margin-bottom: 5px;
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
 }
