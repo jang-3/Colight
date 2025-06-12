@@ -14,12 +14,16 @@ $embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1748872975/example_sd2
 - Straight up ask them, "What happened to your arm? It looks like you’ve been hurt."
 - Sit down and directly ask, "I’m really concerned. Can we talk about the bruise and if you're safe?"
 
+$embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1749706374/cld-sample-5.gif
+
 ### Q: Jamie keeps making excuses for why they can’t hang out anymore. You also notice them avoiding eye contact when they talk about their family. How do you react?
 
 - Leave it be for now. I’ll wait for Jamie to feel ready to open up when they’re ready.
 - Gently ask, "You’ve been distant. Is something going on at home? I’m here if you need someone to talk to."
 - Let Jamie know I’m there for them and assure them, "If you need a break, I can take you out somewhere fun."
 - Ask straight away, "You’ve been avoiding talking about your family. I’m really concerned, do you need help?"
+
+$embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1749712565/cld-sample-2.gif
 
 ### Q: You are calling Jamie at night, and overhear Jamie’s parent yelling at them through the phone and telling them they’re useless. Jamie doesn’t seem to react, but you notice they’ve been quiet all day. What would you do?
 
@@ -28,12 +32,16 @@ $embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1748872975/example_sd2
 - Ask, "Jamie, I can hear the shouting. Is everything okay at home? Do you want to talk about it?"
 - Step in and say, "I’m really concerned. If you need help, I can come over or call someone who can help."
 
+$embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1749706728/cld-sample.gif
+
 ### Q: The next day, Jamie seems especially down and has a hard time focusing during school. They act like everything is fine but seem to be pushing people away. What do you do?
 
 - Avoid pressing the issue. If they want to talk, they’ll come to me.
 - Offer them space, but tell them they can always talk to me if they need to.
 - Casually ask, "Are you sure everything’s okay? You don’t seem like yourself today."
 - Ask directly, "I noticed you’re acting different. Do you want to talk about it?"
+
+$embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1749712582/samples/upscale-face-1.gif
 
 changeType
 
@@ -51,12 +59,16 @@ changeType
 - Tell Jamie they can stay with me for a while, but avoid involving anyone else.
 - I don’t want to get involved. It’s their personal matter.
 
+$embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1749712565/cld-sample-2.gif
+
 ### Q: Jamie finally admits that their parent has been abusive toward them. You feel they’re ready for help. What’s your first response?
 
 - Take immediate action and help them make a safety plan, including calling the authorities.
 - Let Jamie know you’re here to support them when they’re ready to take the next step.
 - Encourage them to reach out to a counselor, and let them make the decision to take the next steps.
 - Suggest reaching out to a trusted adult, like a teacher or counselor, to help them take the next step toward safety.
+
+$embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1749712553/cld-sample-3.gif
 
 ### Q: You hear from someone that Jamie’s parent is starting to suspect they’ve been confiding in you. What’s your reaction?
 

@@ -119,9 +119,9 @@ function submitAnswers() {
   if (Math.abs(axis1) <= 1 && Math.abs(axis2) <= 1) {
     quadra = "Hero_Holland";
   } else if (axis1 > 0) {
-    quadra = axis2 > 0 ? "Indifferent_Irene" : "Overthinker_Owen";
-  } else if (axis1 < 0) {
     quadra = axis2 > 0 ? "Clueless_Chloe" : "Knowxitxall_Ken";
+  } else if (axis1 < 0) {
+    quadra = axis2 < 0 ? "Overthinker_Owen" : "Indifferent_Irene";
   }
 
   console.log("Results:", results);
