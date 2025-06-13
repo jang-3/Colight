@@ -36,65 +36,19 @@
       </div>
       <div id="qnButtons">
         <button id="nextbtn" onclick="traverseQuestions('front')">Next</button>
-        <button id="checkbtn" style="display: none" onclick="submitAnswers()">
+        <button
+          id="checkbtn"
+          style="display: none"
+          onclick="submitAnswers()"
+          type="button"
+        >
           Submit
         </button>
+
         <button onclick="traverseQuestions('back')">Back</button>
       </div>
     </div>
-    <script src="personality.js"></script>
+    <script type="module" src="personality.js"></script>
   </body>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
-    import {
-      getDatabase,
-      ref,
-      push,
-    } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-database.js";
-    import {
-      getDatabase,
-      ref,
-      push,
-    } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-database.js";
-
-    const db = getDatabase();
-
-    export function logResultToFirebase(data) {
-      const resultsRef = ref(db, "quizResults");
-      push(resultsRef, data)
-        .then(() => console.log("Result pushed to Firebase."))
-        .catch((err) => console.error("Error logging result:", err));
-    }
-
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyAY6kpTdzwwpc8siw5nMTC7RV6yhRm9jYg",
-      authDomain: "colight-94527.firebaseapp.com",
-      databaseURL:
-        "https://colight-94527-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "colight-94527",
-      storageBucket: "colight-94527.firebasestorage.app",
-      messagingSenderId: "982501307891",
-      appId: "1:982501307891:web:e8118309fd27e038fa8e86",
-      measurementId: "G-H6SZZCPFK8",
-    };
-
-    // Optional function to log quiz result
-    export function logResultToFirebase(resultData) {
-      const resultsRef = ref(db, "quizResults");
-      push(resultsRef, resultData)
-        .then(() => console.log("Result logged to Firebase"))
-        .catch((error) => console.error("Error logging result:", error));
-    }
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
+  <script type="module"></script>
 </html>
