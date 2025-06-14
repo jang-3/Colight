@@ -52,7 +52,7 @@ function renderQuestion(container, question, choices, index, qType, embedUrl) {
     div.innerHTML += `
       <label for="${id}" class="quizOptions">
         <input type="radio" name="q${index}" value="${i}" id="${id}" hidden>
-        <span>${choice}</span>
+        <span onclick="traverseQuestions('front')">${choice}</span>
       </label><br>`;
   });
 
@@ -61,14 +61,18 @@ function renderQuestion(container, question, choices, index, qType, embedUrl) {
 }
 
 function traverseQuestions(direction) {
-  if (direction === "front" && allQIndex < allQns.length - 1) allQIndex++;
-  else if (direction === "back" && allQIndex > 0) allQIndex--;
+  setTimeout(() => {
+    if (direction === "front" && allQIndex < allQns.length - 1) allQIndex++;
+    else if (direction === "back" && allQIndex > 0) allQIndex--;
 
-  allQns.forEach((q, i) => q.classList.toggle("active", i === allQIndex));
+    allQns.forEach((q, i) => q.classList.toggle("active", i === allQIndex));
 
-  const isLast = allQIndex === allQns.length - 1;
-  document.getElementById("checkbtn").style.display = isLast ? "flex" : "none";
-  document.getElementById("nextbtn").style.display = isLast ? "none" : "flex";
+    const isLast = allQIndex === allQns.length - 1;
+    document.getElementById("checkbtn").style.display = isLast
+      ? "flex"
+      : "none";
+    document.getElementById("nextbtn").style.display = isLast ? "none" : "flex";
+  }, 300); // delay of 300 milliseconds
 }
 
 function submitAnswers() {
@@ -106,6 +110,9 @@ function submitAnswers() {
   else if (axis1 > 0) quadra = axis2 > 0 ? "Clueless_Chloe" : "Knowxitxall_Ken";
   else if (axis1 < 0)
     quadra = axis2 < 0 ? "Overthinker_Owen" : "Indifferent_Irene";
+  else {
+    quadra = "Hero_Holland"; // safe default
+  }
 
   const safeResultKey = sanitizeKey(quadra); // 🔒 Sanitize Firebase path
   incrementFinalResult(safeResultKey);

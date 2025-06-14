@@ -52,6 +52,8 @@ changeType
 - Tell Jamie that if they want to talk later, they can. But I don’t intervene further.
 - Leave them alone, respecting their space and not pushing them to talk.
 
+$embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1749901885/samples/chair.gif
+
 ### Q: You find out that Jamie’s parent has been physically aggressive toward them. It’s been going on for a while, and you’re unsure what to do. What’s your first instinct?
 
 - Contact the authorities immediately. I need to ensure Jamie’s safety.
@@ -77,9 +79,13 @@ $embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1749712553/cld-sample-
 - Distance myself from Jamie for a while to avoid any unnecessary danger.
 - Get a little anxious and stop getting involved in the situation entirely.
 
+$embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1749901860/samples/logo.gif
+
 ### Q: Jamie wants to report the abuse to authorities but is scared of the consequences. What would you do?
 
 - Report the abuse to the authorities myself, acting as a witness on Jamie’s behalf, even if it puts me at risk.
 - Offer to be a witness for Jamie’s report, but I won’t go with them to the authorities. I’ll help them with the process as much as they need.
 - Advise the ways to report abuse to Jamie, and tell Jamie I’m here to support them and would be willing to help them figure out the safest way to report.
 - Simply listen to Jamie, offering them a safe space to talk through their fears and feelings, while gently encouraging them to make the decision when they’re ready.
+
+$embed https://res.cloudinary.com/dc2fitc1v/image/upload/v1749901873/samples/woman-on-a-football-field.gif
