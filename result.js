@@ -18,7 +18,7 @@ const images = {
 const descriptions = {
   Hero_Holland: {
     description: `You are calm, grounded, and brave — not because fear doesn’t exist for you, but because you’ll choose to act through it. You’ll recognise that domestic violence isn’t always obvious, and you won’t look away when others stay silent. You’ll believe in caring out loud and stepping in safely, even when it’s difficult.`,
-    growth: `You can continue to grow by helping others learn how to support safely. You’ll be able to encourage your friends to speak up when something feels wrong, and guide them using the <a href="art.html">A.R.T. of Safe Interruption</a> — Approaching calmly, Responding with care, and Talking without blame. If someone is unsure how to help, you can share what’s worked for you. By modelling thoughtful action and empathy, you’ll become a steady influence in creating a safer, more caring community.`,
+    growth: `You can continue to grow by helping others learn how to support safely. You’ll be able to encourage your friends to speak up when something feels wrong, and guide them using the <a href="art.html" id="special">A.R.T. method</a>A.R.T. of Safe Interruption</a> — Approaching calmly, Responding with care, and Talking without blame. If someone is unsure how to help, you can share what’s worked for you. By modelling thoughtful action and empathy, you’ll become a steady influence in creating a safer, more caring community.`,
   },
 
   Indifferent_Irene: {
@@ -33,12 +33,12 @@ const descriptions = {
 
   Overthinker_Owen: {
     description: `You’ll notice when something’s wrong — the strange energy, the uncomfortable silence — and you’ll want to help. But you might get caught in your thoughts, worrying about what could go wrong if you say the wrong thing or misread the situation.`,
-    growth: `You can grow by realising that overthinking will often lead to inaction, and silence can still cause harm. If you see something concerning, you can take a small, safe step. Using the <a href="art.html">A.R.T. method</a>, you’ll be able to calmly approach someone, offer care by listening without judgment, and speak without blame. You won’t need the perfect words — only the willingness to be present. Over time, your confidence will grow as you choose thoughtful action over fear of making a mistake.`,
+    growth: `You can grow by realising that overthinking will often lead to inaction, and silence can still cause harm. If you see something concerning, you can take a small, safe step. Using the <a href="art.html" id="special">A.R.T. method</a>, you’ll be able to calmly approach someone, offer care by listening without judgment, and speak without blame. You won’t need the perfect words — only the willingness to be present. Over time, your confidence will grow as you choose thoughtful action over fear of making a mistake.`,
   },
 
   Knowxitxall_Ken: {
     description: `You’re bold and quick to act when you sense a problem, driven by good intentions. But in your urgency, you might step in without fully understanding the situation — which could lead to more harm than help.`,
-    growth: `You can grow by learning to pause before jumping in. If you see someone upset or uncomfortable, you can take a moment to assess the situation and then apply the <a href="art.html">A.R.T. method</a>. You’ll approach with calm, respond with care, and speak in a way that doesn’t blame or escalate. By slowing down and listening first, you’ll protect others and yourself. Your strength will come not just from acting, but from knowing when and how to act wisely.`,
+    growth: `You can grow by learning to pause before jumping in. If you see someone upset or uncomfortable, you can take a moment to assess the situation and then apply the <a href="art.html" id="special">A.R.T. method</a>. You’ll approach with calm, respond with care, and speak in a way that doesn’t blame or escalate. By slowing down and listening first, you’ll protect others and yourself. Your strength will come not just from acting, but from knowing when and how to act wisely.`,
   },
 };
 

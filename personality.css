@@ -237,8 +237,6 @@ input[type="radio"] {
   color: rgb(255, 125, 3);
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  margin-left: 10px;
-  margin-right: 10px;
   text-wrap: nowrap;
 }
 
