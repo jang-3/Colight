@@ -200,6 +200,12 @@ input[type="radio"] {
   margin: 8px 0;
 }
 
+#result-text {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
 #value1,
 #value2 {
   background-color: #ff8000;
@@ -213,8 +219,8 @@ input[type="radio"] {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  width: 100%;
-  max-width: 700px;
+  width: 60%;
+  max-width: 800px;
   margin: 20px 0;
   flex-wrap: nowrap;
 }
@@ -224,12 +230,22 @@ input[type="radio"] {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 50vw;
+  width: 80vw;
 }
 
 .sidebox {
-  width: 140px;
+  width: 100px;
   padding: 0 5px;
+}
+
+.sidebox {
+  width: auto;
+  max-width: 200px;
+  height: 60px;
+  display: flex;
+  text-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .subScores p {
@@ -241,22 +257,35 @@ input[type="radio"] {
 #result-page {
   padding: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   min-height: 100vh;
+  width: 100vw;
   box-sizing: border-box;
   text-align: center;
+  flex-wrap: wrap;
+}
+
+#result-title-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #result-title {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 600px;
 }
 
 #char-img {
-  width: 180px;
-  height: 180px;
+  width: 300px;
+  height: 300px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -271,21 +300,38 @@ input[type="radio"] {
   text-align: justify;
 }
 
+#growth-path {
+  max-width: 700px;
+  padding: 10px 20px;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
 /* Responsive layout for mobile */
 @media (max-width: 600px) {
   .subScores {
     align-items: center;
     justify-content: center;
+    max-width: 100vw;
   }
 
   .sidebox {
-    width: 100%;
-    max-width: 300px;
-    padding: 0 10px;
+    width: auto;
+    max-width: 200px;
+    height: 60px;
+    display: flex;
+    text-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .divs {
+    width: 50vw;
   }
 
   .result-container {
-    max-width: 90vw;
+    max-width: 40vw;
   }
 
   #char-img {
@@ -311,6 +357,15 @@ input[type="radio"] {
     font-size: 15px;
     line-height: 1.6;
     text-align: left;
+    max-width: 300px;
+  }
+
+  #growth-path {
+    max-width: 300px;
+    padding: 10px 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
   }
 
   .subScores p {

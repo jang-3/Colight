@@ -13,6 +13,9 @@ html {
   text-decoration: none; /* Remove underline (optional) */
   font-family: "Inter", sans-serif;
   transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-wrap: nowrap;
 }
 
 body {
@@ -64,7 +67,7 @@ h2 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 40vw;
+  width: 60vw;
 }
 
 #front-cover {

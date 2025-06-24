@@ -52,9 +52,8 @@ hr {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 40vw;
+  width: 60vw;
 }
-
 body p {
   font-family: "Inter", sans-serif;
   margin: none;
