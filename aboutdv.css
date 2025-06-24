@@ -103,6 +103,11 @@ h2 {
   text-align: center;
 }
 
+#front-cover div {
+  justify-content: center;
+  align-items: center;
+}
+
 #front-cover h1 {
   font-size: 100px;
   letter-spacing: -2px;
