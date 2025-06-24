@@ -28,7 +28,7 @@ const descriptions = {
 
   Clueless_Chloe: {
     description: `You care deeply, but you might not always recognise the signs of abuse — especially when they’re quiet or emotional rather than physical. It’s not that you’ll ignore people in pain, you just haven’t learned what to look out for yet.`,
-    growth: `You’ll be able to grow by learning how abuse can show up in subtle ways — like excessive control, manipulation, or isolation. When you start to notice these signs, you can act using the <a href="art.html">A.R.T. method</a>: you’ll calmly approach someone you’re concerned about, respond with understanding, and talk gently without placing blame. If a friend seems constantly anxious around their partner or stops talking to others, you’ll know how to check in. As you become more aware, you’ll offer the kind of support others can truly count on.`,
+    growth: `You’ll be able to grow by learning how abuse can show up in subtle ways — like excessive control, manipulation, or isolation. When you start to notice these signs, you can act using the <a href="art.html" id="special">A.R.T. method</a>: you’ll calmly approach someone you’re concerned about, respond with understanding, and talk gently without placing blame. If a friend seems constantly anxious around their partner or stops talking to others, you’ll know how to check in. As you become more aware, you’ll offer the kind of support others can truly count on.`,
   },
 
   Overthinker_Owen: {
@@ -40,10 +40,6 @@ const descriptions = {
     description: `You’re bold and quick to act when you sense a problem, driven by good intentions. But in your urgency, you might step in without fully understanding the situation — which could lead to more harm than help.`,
     growth: `You can grow by learning to pause before jumping in. If you see someone upset or uncomfortable, you can take a moment to assess the situation and then apply the <a href="art.html">A.R.T. method</a>. You’ll approach with calm, respond with care, and speak in a way that doesn’t blame or escalate. By slowing down and listening first, you’ll protect others and yourself. Your strength will come not just from acting, but from knowing when and how to act wisely.`,
   },
-};
-
-const growthPaths = {
-  Hero_Holland: `tets`,
 };
 
 const params = new URLSearchParams(window.location.search);

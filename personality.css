@@ -233,6 +233,15 @@ input[type="radio"] {
   width: 80vw;
 }
 
+#special {
+  color: rgb(255, 125, 3);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-wrap: nowrap;
+}
+
 .sidebox {
   width: 100px;
   padding: 0 5px;
