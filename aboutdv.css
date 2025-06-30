@@ -52,7 +52,7 @@ hr {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 60vw;
+  width: 100vw;
 }
 body p {
   font-family: "Inter", sans-serif;
