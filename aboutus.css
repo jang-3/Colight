@@ -214,3 +214,50 @@ hr {
   max-width: 250px;
   text-align: center;
 }
+
+#intervention {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+  width: 100vw;
+  text-align: center;
+}
+
+.iv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 40px;
+  width: 80vw;
+  text-align: center;
+}
+
+#intervention h1 {
+  color: white;
+}
+
+#intervention p {
+  color: white;
+}
+
+.qna {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 80vw;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  font-weight: normal;
+  text-align: left;
+  margin: 40px;
+}
+
+.qna h4 {
+  color: rgb(255, 125, 3);
+  font-weight: 3px;
+}
