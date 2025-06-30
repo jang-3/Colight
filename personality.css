@@ -315,6 +315,31 @@ input[type="radio"] {
   text-align: justify;
 }
 
+#backHome {
+  display: flex;
+  width: 97vw;
+  height: 50px;
+}
+
+#homebtn2 {
+  width: 150px;
+  height: 60px;
+  font-weight: normal;
+  font-family: "Inter", sans-serif;
+  border-radius: 15px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+#homebtn2 button:hover {
+  outline: none;
+  border: none;
+  background-color: rgb(221, 50, 50);
+}
+
 /* Responsive layout for mobile */
 @media (max-width: 600px) {
   .subScores {
