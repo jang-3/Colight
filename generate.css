@@ -1,0 +1,52 @@
+html {
+  overflow-x: hidden;
+  background-color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p,
+h1,
+h2,
+h3 {
+  color: white;
+}
+
+body p {
+  font-family: "Inter", sans-serif;
+  margin: none;
+  color: rgb(181, 181, 181);
+}
+
+#tasks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+}
+
+#prompt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#persona-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#selfie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

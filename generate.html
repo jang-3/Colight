@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Send Prompt & Selfie</title>
+    <link rel="stylesheet" href="generate.css" />
+  </head>
+  <body>
+    <section id="tasks">
+      <div id="prompt">
+        <h2>Send Prompt</h2>
+        <input type="text" id="prompt" placeholder="Enter prompt..." />
+        <button id="sendBtn">Send Prompt</button>
+      </div>
+
+      <div id="persona-select">
+        <label for="persona">Which Persona are you?:</label>
+        <select id="persona">
+          <option value="Ken">Ken</option>
+          <option value="Irene">Irene</option>
+          <option value="Chloe">Chloe</option>
+          <option value="Owen">Owen</option>
+          <option value="Holland">Holland</option>
+        </select>
+      </div>
+      <br /><br />
+
+      <div id="selfie">
+        <h2>Take a Selfie</h2>
+        <video id="video" width="300" autoplay></video>
+        <button id="snap">Take Selfie</button>
+        <canvas id="canvas" style="display: none"></canvas>
+        <link rel="stylesheet" href="generate.js" />
+      </div>
+    </section>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        addDoc,
+      } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
+      import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+      // Firebase config (for prompt storage)
+      const firebaseConfig = {
+        apiKey: "AIzaSyCTaKBBIAtSNtUK3fS1Yx6yOItMQwLselU",
+        authDomain: "colightai.firebaseapp.com",
+        projectId: "colightai",
+        storageBucket: "colightai.appspot.com",
+        messagingSenderId: "475682530237",
+        appId: "1:475682530237:web:29a9f8524b3120db1b28d4",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Supabase config (replace with your actual keys)
+      const supabaseUrl = "https://oqvwwmqqhttbqejjlgpp.supabase.co";
+      const supabaseKey =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9xdnd3bXFxaHR0YnFlampsZ3BwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDkzNDYwNzMsImV4cCI6MjA2NDkyMjA3M30.6bJFnvt_AQ-TGB8dEPPfSDj4NCw_JL2b5RYai1FuSas";
+      const supabase = createClient(supabaseUrl, supabaseKey);
+
+      // Send prompt to Firebase Firestore
+      async function sendPrompt() {
+        const prompt = document.getElementById("prompt").value;
+        const persona = document.getElementById("persona").value;
+        if (!prompt) return;
+        await addDoc(collection(db, "prompts"), {
+          prompt,
+          persona,
+          timestamp: Date.now(),
+        });
+        alert("Prompt & Persona sent to Firebase!");
+      }
+
+      document.getElementById("sendBtn").addEventListener("click", sendPrompt);
+
+      // Webcam setup
+      const video = document.getElementById("video");
+      const canvas = document.getElementById("canvas");
+      const context = canvas.getContext("2d");
+
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
+        .then((stream) => {
+          video.srcObject = stream;
+        })
+        .catch((err) => {
+          console.error("Webcam error:", err);
+        });
+
+      // Upload selfie to Supabase
+      document.getElementById("snap").addEventListener("click", async () => {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        canvas.toBlob(async (blob) => {
+          const timestamp = Date.now();
+          const filename = `selfie_${timestamp}.jpg`;
+          const persona = document.getElementById("persona").value;
+
+          // Upload to Supabase Storage
+          const { data, error } = await supabase.storage
+            .from("selfies") // Make sure you have a 'selfies' bucket
+            .upload(filename, blob, {
+              cacheControl: "3600",
+              upsert: false,
+              contentType: "image/jpeg",
+            });
+
+          if (error) {
+            console.error("Supabase upload error:", error.message);
+            alert("Selfie upload failed.");
+            return;
+          }
+
+          // Get public URL
+          const { data: publicUrlData } = supabase.storage
+            .from("selfies")
+            .getPublicUrl(filename);
+
+          const publicUrl = publicUrlData.publicUrl;
+
+          // Optionally store metadata in Supabase DB
+          await supabase
+            .from("selfie_metadata") // You need to create this table if you want metadata
+            .insert([{ url: publicUrl, timestamp, persona }]);
+          alert(`Selfie uploaded as "${persona}" persona!`);
+        }, "image/jpeg");
+      });
+    </script>
+  </body>
+</html>
