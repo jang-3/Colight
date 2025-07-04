@@ -50,3 +50,39 @@ body p {
   align-items: center;
   justify-content: center;
 }
+
+.question.active {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  height: 100vh;
+  justify-content: center;
+}
+
+.quizOptions span {
+  display: inline-flex;
+  padding: 15px 20px;
+  min-width: 500px;
+  width: 800px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: white;
+  border: 5px solid rgb(204, 204, 204);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.quizOptions input[type="radio"]:checked + span {
+  color: black;
+  background-color: rgb(204, 204, 204);
+  padding: 15px 20px;
+  border-radius: 10px;
+}
