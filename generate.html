@@ -2,10 +2,11 @@
 <html>
   <head>
     <title>Send Prompt & Selfie</title>
+    <link rel="stylesheet" href="generate.css" />
   </head>
   <body>
     <section id="tasks">
-      <div id="prompt">
+      <div id="prompter">
         <h2>Send Prompt</h2>
         <input type="text" id="prompt" placeholder="Enter prompt..." />
         <button id="sendBtn">Send Prompt</button>
@@ -21,16 +22,19 @@
           <option value="Holland">Holland</option>
         </select>
       </div>
-      <br /><br />
-
       <div id="selfie">
         <h2>Take a Selfie</h2>
         <video id="video" width="300" autoplay></video>
         <button id="snap">Take Selfie</button>
         <canvas id="canvas" style="display: none"></canvas>
-        <link rel="stylesheet" href="generate.js" />
+      </div>
+      <div class="set">
+        <button id="fc" onclick="traverseQuestions('front')">Next</button
+        ><button id="bc" onclick="traverseQuestions('back')">Back</button
+        ><button id="sa" onclick="submitAns()">Submit</button>
       </div>
     </section>
+    <script src="generate.js"></script>
 
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";

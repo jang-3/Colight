@@ -1,6 +1,6 @@
 html {
   overflow-x: hidden;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 * {
@@ -14,6 +14,12 @@ h1,
 h2,
 h3 {
   color: white;
+}
+
+body h2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 body p {
@@ -32,7 +38,7 @@ body p {
   height: 100vh;
 }
 
-#prompt {
+#prompter {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,12 +49,14 @@ body p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 #selfie {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .question.active {
@@ -56,11 +64,45 @@ body p {
   align-items: center;
   flex-direction: column;
   width: 50vw;
-  height: 100vh;
+  height: 30vh;
+  background-color: white;
+  border-radius: 10px;
   justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  padding: 30px;
+  text-align: center;
 }
 
-.quizOptions span {
+.question {
+  display: none;
+}
+
+.qnAns {
+  width: 100%;
+  max-width: 700px;
+  height: 150px;
+  padding: 16px;
+  margin-top: 12px;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  color: #333;
+  resize: vertical;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qnAns:focus {
+  outline: none;
+  border-color: #7a9eff;
+  box-shadow: 0 0 0 4px rgba(122, 158, 255, 0.2);
+  background-color: white;
+}
+.qnOptions span {
   display: inline-flex;
   padding: 15px 20px;
   min-width: 500px;
@@ -80,9 +122,147 @@ input[type="radio"] {
   display: none;
 }
 
-.quizOptions input[type="radio"]:checked + span {
+.qnOptions {
+  margin-bottom: 30px;
+}
+
+.qnOptions input[type="radio"]:checked + span {
   color: black;
   background-color: rgb(204, 204, 204);
   padding: 15px 20px;
   border-radius: 10px;
+}
+
+.set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+#fc,
+#bc {
+  width: 100px;
+  height: 60px;
+  font-weight: normal;
+  font-family: "Inter", sans-serif;
+  border-radius: 10px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background-color: grey;
+  color: black;
+  margin: 5px;
+}
+
+#sa {
+  width: 100px;
+  height: 60px;
+  font-weight: normal;
+  font-family: "Inter", sans-serif;
+  border-radius: 10px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  margin: 5px;
+}
+
+#persona-select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 40px 0;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  max-width: 500px;
+  width: 90%;
+}
+
+#persona-select label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  font-family: "Inter", sans-serif;
+}
+
+#persona {
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  background-color: white;
+  font-family: "Inter", sans-serif;
+  color: #333;
+  width: 100%;
+  max-width: 300px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23999' height='16' viewBox='0 0 24 24' width='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+#persona:focus {
+  border-color: #7a9eff;
+  outline: none;
+}
+
+#selfie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  background-color: #f8f8f8;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  width: 90%;
+}
+
+#selfie h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  font-family: "Inter", sans-serif;
+}
+
+#video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  background-color: #000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#snap {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#snap:hover {
+  background-color: #357bd8;
+  transform: scale(1.03);
+}
+
+#snap:active {
+  transform: scale(0.98);
 }
