@@ -53,7 +53,7 @@ async function loadQuestions() {
 function renderQuestion(container, question, choices, index, qType, embedUrl) {
   const div = document.createElement("div");
   div.classList.add("question");
-  div.innerHTML += `<div class="qnOptions"> <h4 class="${qType} question-ask">${question}</h4> </div>`;
+  div.innerHTML += `<div class="qnOptions titleQ"> <h4 class="${qType} question-ask">${question}</h4> </div>`;
 
   if (choices.length > 0) {
     choices.forEach((choice, i) => {
@@ -157,10 +157,6 @@ function traverseQuestions(direction) {
     allQns.forEach((q, i) => q.classList.toggle("active", i === allQIndex));
 
     const isLast = allQIndex === allQns.length - 1;
-    document.getElementById("checkbtn").style.display = isLast
-      ? "flex"
-      : "none";
-    document.getElementById("nextbtn").style.display = isLast ? "none" : "flex";
   }, 300);
 }
 
