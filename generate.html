@@ -7,11 +7,16 @@
   <body>
     <section id="tasks">
       <div id="prompter">
-        <h2>Send Prompt</h2>
-        <input type="text" id="prompt" placeholder="Enter prompt..." />
-        <button id="sendBtn">Send Prompt</button>
+        <div id="hidprompt">
+          <h2>Send Prompt</h2>
+          <input type="text" id="prompt" placeholder="Enter prompt..." />
+          <button id="sendBtn">Send Prompt</button>
+        </div>
       </div>
-
+      <div id="name-input">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name..." />
+      </div>
       <div id="persona-select">
         <label for="persona">Which Persona are you?:</label>
         <select id="persona">
@@ -30,8 +35,8 @@
       </div>
       <div class="set">
         <button id="fc" onclick="traverseQuestions('front')">Next</button
-        ><button id="bc" onclick="traverseQuestions('back')">Back</button
-        ><button id="sa" onclick="submitAns()">Submit</button>
+        ><button id="bc" onclick="traverseQuestions('back')">Back</button>
+        <button id="sa" onclick="submitAns()">Submit</button>
       </div>
     </section>
     <script src="generate.js"></script>
@@ -76,6 +81,8 @@
         });
         alert("Prompt & Persona sent to Firebase!");
       }
+
+      window.sendPrompt = sendPrompt;
 
       document.getElementById("sendBtn").addEventListener("click", sendPrompt);
 

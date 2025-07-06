@@ -8,7 +8,9 @@ let allQIndex = 0;
 let qnStart = document.getElementById("prompter");
 let checkPersona = document.getElementById("persona-select");
 let selfie = document.getElementById("selfie");
-let fullQuiz = [qnStart, checkPersona, selfie];
+let name = document.getElementById("name-input");
+
+let fullQuiz = [qnStart, name, checkPersona, selfie];
 let fc = document.getElementById("fc");
 let bc = document.getElementById("bc");
 
@@ -57,10 +59,10 @@ function renderQuestion(container, question, choices, index, qType, embedUrl) {
     choices.forEach((choice, i) => {
       const id = `q${index}_a${i}`;
       div.innerHTML += `
-          <label for="${id}" class="qnOptions">
-            <input type="radio" name="q${index}" value="${i}" id="${id} hidden">
-            <span onclick="traverseQuestions('front')">${choice}</span>
-          </label><br>`;
+      <label class="qnOptions">
+        <input type="radio" name="q${index}" value="${i}" id="${id}">
+        <span>${choice}</span>
+      </label><br>`;
     });
   } else {
     div.innerHTML += `<textarea class="qnAns" rows="4" cols="50" placeholder="Type your answer here..."></textarea>`;
@@ -107,8 +109,10 @@ function submitAns() {
 
     if (choiceAnswered === 3) {
       cycleQuizStage("next");
+      document.getElementById("prompt").value =
+        generateImagePrompt(finalAnswers);
+      window.sendPrompt();
     } else {
-      traverseQuestions("back");
     }
   } else if (currentStageIndex > 0 || choiceAnswered >= 3) {
     cycleQuizStage("next");
@@ -120,6 +124,21 @@ function submitAns() {
   }
 
   allQns.forEach((q, i) => q.classList.toggle("active", i === allQIndex));
+}
+
+function generateImagePrompt(finalAnswers) {
+  // Extract just the answer text
+  const keywords = finalAnswers
+    .map((entry) => entry.answer.trim())
+    .filter((answer) => answer.length > 0); // remove blanks
+
+  // Join answers into a single phrase
+  const joined = keywords.join(", ");
+
+  // Build final prompt
+  const prompt = "Please generate a background image of " + joined;
+  alert(`${prompt}`);
+  return prompt;
 }
 
 function traverseQuestions(direction) {
