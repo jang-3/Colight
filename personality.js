@@ -6,6 +6,7 @@ let allQIndex = 0;
 function startQuiz() {
   const cover = document.getElementById("quiz-cover");
   cover.style.opacity = "0";
+  cover.style.zIndex = "-2";
 }
 
 async function loadQuestions() {

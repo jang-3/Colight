@@ -191,11 +191,15 @@ input[type="radio"] {
   margin: 5px;
 }
 
+#start-btn {
+  margin-top: 20px;
+}
+
 #welcome {
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 50vw;
+  width: 80vw;
   height: auto;
   background-color: white;
   border-radius: 10px;
