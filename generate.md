@@ -1,15 +1,33 @@
-### Q: Jamie wants to report the abuse to authorities but is scared of the consequences. What would you do?
+### Q: Type a word that people often use to describe you.
 
-### Q: Jamie sdfsdfsdf to report the abuse to authorities but is scared of the consequences. What would you do?
+### Q: Emotional or logical?
 
-### Q: Jamie hhfghgh to report the abuse to authorities but is scared of the consequences. What would you do?
+- Emotional
+- Logical
 
-- hs
-- sdfsdf
-- sdfsdfs
+### Q: Visual art or music?
 
-### Q: Jamie llll to report the abuse to authorities but is scared of the consequences. What would you do?
+- Visual art
+- music
 
-### Q: Jamie lalalal to report the abuse to authorities but is scared of the consequences. What would you do?
+### Q: Which of the following animals best represents you?
 
-### Q: Jamie yies to report the abuse to authorities but is scared of the consequences. What would you do?
+- Frog
+- Eagle
+- Wolf
+- Otter
+
+### Q: You believe an ideal life should be filled with:
+
+- Fun
+- Knowledge
+- Friends
+- Peace
+
+### Q: Type a word that reflects your feelings now.
+
+### Q: Which scenery pleases your senses the most?
+
+- Mountains
+- Forest
+- Ocean
