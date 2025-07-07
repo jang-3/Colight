@@ -7,6 +7,24 @@
   </head>
   <body>
     <section id="tasks">
+      <div id="backHome">
+        <a
+          class="a"
+          href="index.html"
+          style="
+            background-image: url('https://cdn-icons-png.flaticon.com/512/93/93634.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 50px;
+            height: 50px;
+            flex: 0 0 auto;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+          "
+        ></a>
+      </div>
       <div id="prompter">
         <div id="hidprompt">
           <h2>Send Prompt</h2>
@@ -33,6 +51,16 @@
         <video id="video" width="300" autoplay></video>
         <button id="snap">Take Selfie</button>
         <canvas id="canvas" style="display: none"></canvas>
+      </div>
+      <div id="thanks">
+        <h2>Thank you for completing the digital pledge!</h2>
+        <p>
+          See yourself on screen with your personalised background and bystander
+          type!
+        </p>
+        <button onclick="window.location.href='index.html'" id="homebtn3">
+          Back to website
+        </button>
       </div>
       <div class="set">
         <button id="fc" onclick="traverseQuestions('front')">Next</button

@@ -10,14 +10,27 @@ h3 {
   font-weight: 400;
 }
 
+body {
+  margin: none;
+}
+
+#pbody {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: none;
+}
+
 #page-container {
-  margin-top: 30px;
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #d5e0f6;
 }
 
 .question {
@@ -31,7 +44,7 @@ h3 {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 85vh;
+  height: auto;
   align-items: center;
 }
 
@@ -40,7 +53,7 @@ h3 {
   align-items: center;
   flex-direction: column;
   width: 50vw;
-  height: 100vh;
+  height: auto;
   justify-content: center;
 }
 
@@ -52,16 +65,16 @@ h3 {
   height: 30px;
   border-radius: 10px;
   background-color: white;
-  border: 5px solid rgb(204, 204, 204);
   align-items: center;
   justify-content: center;
   text-align: center;
+  text-wrap: wrap;
   color: black;
   cursor: pointer;
 }
 
 .gifshow {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 400px;
   height: auto;
   border-radius: 10px;
@@ -71,8 +84,9 @@ h3 {
   display: flex;
   margin: none;
   margin-bottom: 5vh;
-  font-weight: 400;
-  font-size: 17px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
 }
 
 input[type="radio"] {
@@ -85,8 +99,7 @@ input[type="radio"] {
   align-items: center;
   width: 30vw;
   height: 30px;
-  margin-top: 10px;
-  padding: 30px;
+  transition: all 0.3s ease-in-out;
 }
 
 #qnButtons button {
@@ -98,10 +111,13 @@ input[type="radio"] {
   border: none;
   font-size: 15px;
   width: 30px;
-  background-color: #dcdcdc;
+  background-color: #90aee0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
   padding: 20px 50px;
   margin-left: 5px;
   margin-right: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 #checkbtn,
@@ -110,13 +126,14 @@ input[type="radio"] {
 }
 
 #qnButtons button:hover {
-  background-color: rgb(204, 204, 204);
+  background-color: #587bbd;
+  color: white;
 }
 
 .quizOptions input[type="radio"]:checked + span {
+  transition: all 0.1s ease-in-out;
   color: black;
-  background-color: rgb(204, 204, 204);
-  padding: 15px 20px;
+  background-color: #90aee0;
   border-radius: 10px;
 }
 
@@ -130,7 +147,7 @@ input[type="radio"] {
 
   .quizOptions span {
     min-width: unset;
-    width: 90vw;
+    width: 75vw;
     max-width: 90vw;
     height: auto;
     padding: 15px;
@@ -140,20 +157,6 @@ input[type="radio"] {
   .gifshow {
     width: 80vw;
     max-width: 300px;
-  }
-
-  #qnButtons {
-    width: 100vw;
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
-  }
-
-  #qnButtons button {
-    width: 80%;
-    margin: 5px 0;
-    padding: 10px 20px;
-    font-size: 14px;
   }
 
   .question-ask {

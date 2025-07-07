@@ -9,8 +9,9 @@ let qnStart = document.getElementById("prompter");
 let checkPersona = document.getElementById("persona-select");
 let selfie = document.getElementById("selfie");
 let name = document.getElementById("name-input");
+let thanks = document.getElementById("thanks");
 
-let fullQuiz = [qnStart, name, checkPersona, selfie];
+let fullQuiz = [qnStart, name, checkPersona, selfie, thanks];
 let fc = document.getElementById("fc");
 let bc = document.getElementById("bc");
 
@@ -53,7 +54,7 @@ async function loadQuestions() {
 function renderQuestion(container, question, choices, index, qType, embedUrl) {
   const div = document.createElement("div");
   div.classList.add("question");
-  div.innerHTML += `<div class="qnOptions titleQ"> <h4 class="${qType} question-ask">${question}</h4> </div>`;
+  div.innerHTML += `<div class="qnOptions titleQ"> <p style="margin-bottom: 20px; font-size: 15px;">Click 'Next' and 'Back' to cycle between question selections. Pick three questions to answer by submitting them.</p><h4 class="${qType} question-ask">${question}</h4> </div>`;
 
   if (choices.length > 0) {
     choices.forEach((choice, i) => {
@@ -177,6 +178,9 @@ function cycleQuizStage(direction) {
 
   // Show current stage
   fullQuiz[currentStageIndex].style.display = "flex"; // or "block" if flex isn't needed
+  if (fullQuiz[currentStageIndex] === fullQuiz.length) {
+    document.getElementById("sa").style.display = "none";
+  }
 }
 
 loadQuestions();
