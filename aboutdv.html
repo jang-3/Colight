@@ -30,7 +30,8 @@
   </head>
   <body>
     <div id="header-bar">
-      <div id="links">
+      <button id="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+      <div id="links" class="hidden">
         <a
           class="a"
           href="index.html"
@@ -47,6 +48,7 @@
         <a class="link" href="aboutus.html"> About us </a>
         <a class="link" href="aboutdv.html"> About Domestic Violence </a>
         <a class="link" href="personality.html"> Personality Quiz </a>
+        <a class="link" href="generate.html"> Digital Pledge </a>
         <a class="link" href="art.html"> Learn the A.R.T </a>
         <a class="link" href="faq.html"> FAQ </a>
         <a
@@ -343,4 +345,13 @@
     <section></section>
   </body>
   <script src="abdv.js"></script>
+  <script>
+    const toggleBtn = document.getElementById("menu-toggle");
+    const linksDiv = document.getElementById("links");
+
+    toggleBtn.addEventListener("click", () => {
+      const isHidden = linksDiv.classList.toggle("hidden");
+      toggleBtn.innerHTML = isHidden ? "&#9776;" : "&times;";
+    });
+  </script>
 </html>

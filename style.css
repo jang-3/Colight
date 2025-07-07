@@ -72,7 +72,7 @@ h2 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 60vw;
+  width: 90vw;
 }
 
 #front-cover {
@@ -532,5 +532,41 @@ h2 {
 
   #mission div h1 {
     font-size: 40px;
+  }
+}
+
+/* Ensure button stays visible at all times */
+#menu-toggle {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  padding: 10px;
+  z-index: 1001;
+  display: none;
+}
+
+/* Make the links flex row for desktop */
+#links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Optional: responsive tweak to stack links on small screens */
+@media (max-width: 768px) {
+  #links {
+    flex-direction: column;
+    width: 100%;
+  }
+  #menu-toggle {
+    display: block;
+  }
+
+  /* Hide links when toggled */
+  #links.hidden {
+    display: none;
   }
 }
