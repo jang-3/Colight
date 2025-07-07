@@ -2,7 +2,7 @@ let allQns = [];
 let answered = [];
 let finalAnswers = [];
 let choiceAnswered = 0;
-
+let quizStarted = false;
 let allQIndex = 0;
 
 let qnStart = document.getElementById("prompter");
@@ -10,10 +10,19 @@ let checkPersona = document.getElementById("persona-select");
 let selfie = document.getElementById("selfie");
 let name = document.getElementById("name-input");
 let thanks = document.getElementById("thanks");
+let welcome = document.getElementById("welcome");
+let set = document.querySelector(".set");
 
-let fullQuiz = [qnStart, name, checkPersona, selfie, thanks];
+let fullQuiz = [welcome, qnStart, name, checkPersona, selfie, thanks];
 let fc = document.getElementById("fc");
 let bc = document.getElementById("bc");
+
+function startPledge() {
+  cycleQuizStage("next");
+  quizStarted = true;
+
+  set.style.display = "flex";
+}
 
 async function loadQuestions() {
   const res = await fetch("generate.md");
@@ -76,7 +85,7 @@ function renderQuestion(container, question, choices, index, qType, embedUrl) {
 function submitAns() {
   const currentQn = allQns[allQIndex];
 
-  if (currentStageIndex === 0 && choiceAnswered < 3) {
+  if (currentStageIndex === 1 && choiceAnswered < 3) {
     // 🔍 1. Extract the question text
     const questionText = currentQn.querySelector("h4")?.textContent.trim();
 
@@ -115,7 +124,7 @@ function submitAns() {
       window.sendPrompt();
     } else {
     }
-  } else if (currentStageIndex > 0 || choiceAnswered >= 3) {
+  } else if (currentStageIndex > 1 || choiceAnswered >= 3) {
     cycleQuizStage("next");
     return;
   }
@@ -165,8 +174,10 @@ let currentStageIndex = 0; // index in fullQuiz
 
 function cycleQuizStage(direction) {
   // Hide all stages
-  bc.style.display = "none";
-  fc.style.display = "none";
+  if (quizStarted) {
+    bc.style.display = "none";
+    fc.style.display = "none";
+  }
   fullQuiz.forEach((section) => (section.style.display = "none"));
 
   // Update index based on direction

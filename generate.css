@@ -153,7 +153,7 @@ input[type="radio"] {
   height: auto;
 }
 .set {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -175,18 +175,41 @@ input[type="radio"] {
   margin: 5px;
 }
 
-#sa {
+#sa,
+#start-btn {
   width: 100px;
   height: 60px;
   font-weight: normal;
   font-family: "Inter", sans-serif;
   border-radius: 10px;
   font-size: 20px;
+  text-wrap: nowrap;
   outline: none;
   border: none;
   background-color: black;
   color: white;
   margin: 5px;
+}
+
+#welcome {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
+#welcome h4 {
+  margin-bottom: 20px;
 }
 
 #backHome {
