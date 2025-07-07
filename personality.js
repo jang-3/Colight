@@ -3,6 +3,11 @@ let axis1 = 0;
 let axis2 = 0;
 let allQIndex = 0;
 
+function startQuiz() {
+  const cover = document.getElementById("quiz-cover");
+  cover.style.opacity = "0";
+}
+
 async function loadQuestions() {
   const res = await fetch("questions.md");
   const mdText = await res.text();
@@ -128,6 +133,7 @@ function submitAnswers() {
 
 window.traverseQuestions = traverseQuestions;
 window.submitAnswers = submitAnswers;
+window.startQuiz = startQuiz;
 
 // ---------------------- 🔥 FIREBASE -------------------------
 

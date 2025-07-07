@@ -44,11 +44,29 @@
             width: 50px;
             height: 50px;
             flex: 0 0 auto;
-            margin-top: 30px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2000;
           "
         ></a>
       </div>
+      <div id="quiz-cover">
+        <div id="cover-text">
+          <h1 style="font-weight: 600; font-size: 50px">
+            Welcome to our personality quiz!
+          </h1>
+          <p>
+            Find out your type of bystander, before learning what you can do to
+            continually improve yourself on how to become a better bystander to
+            fight Domestic Violence.
+          </p>
+        </div>
 
+        <button id="intro-btn" onclick="startQuiz()" type="button">
+          Begin Quiz
+        </button>
+      </div>
       <div id="quiz-container">
         <div id="gif-container"></div>
       </div>
