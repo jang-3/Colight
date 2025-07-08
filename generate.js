@@ -147,7 +147,6 @@ function generateImagePrompt(finalAnswers) {
 
   // Build final prompt
   const prompt = "Please generate a background image of " + joined;
-  alert(`${prompt}`);
   return prompt;
 }
 
