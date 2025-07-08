@@ -1,36 +1,38 @@
-### Q: What word do most people often use to describe you?
+### Q: What word do most people often use to describe your vibe or presence?
 
-### Q: Emotional or logical?
+### Q: If your thoughts took the form of a structure, what would it be?
 
-- Emotional
-- Logical
+- A mirror maze
+- A spiral tower
+- A floating bridge
+- An underground library
 
-### Q: Visual art or music?
+### Q: What kind of beauty speaks to you most?
 
 - Visual art
-- music
+- Music
 
-### Q: What colour vibes with you best?
+### Q: What colour atmosphere fits your personality best?
 
-- Royal Purple
-- Comfort Blue
-- Energetic Orange
-- Relaxed Green
+- Royal Purple (mystical, majestic)
+- Comfort Blue (cool, gentle)
+- Energetic Orange (bold, creative)
+- Relaxed Green (natural, calm)
 
-### Q: You believe an ideal life should be filled with:
+### Q: You believe an ideal life looks like:
 
-- Social Activities
-- Knowledge
-- Entertainment
-- Peace
+- A bustling festival
+- A peaceful library
+- A cozy cinema
+- A remote cabin
 
-### Q: What word reflects your feelings now?
+### Q: What word could describe your world if it were a setting?
 
-### Q: Which scenery pleases your senses the most?
+### Q: Which scenery pulls you in the most?
 
-- Mountains
-- Forest
-- Ocean
+- Mountain ridges
+- Mossy forest paths
+- Ocean waves at dusk
 
 ### Q: What time of day feels most like you?
 
@@ -39,9 +41,9 @@
 - Blue Hour
 - Midnight Glow
 
-### Q: What is one word that feels like "home" to you?
+### Q: What is one word that feels like "home" as a place?
 
-### Q: Pick a sound that resonates with your soul.
+### Q: Pick a sound that best matches your inner world.
 
 - Rain on leaves
 - A slow heartbeat
@@ -69,11 +71,11 @@
 - Muted greens and earth tones
 - Black, silver, and electric cyan
 
-### Q: What is one word that describes your ideal world?
+### Q: What is one word that describes your ideal world as a visual space?
 
-### Q: Which material do you feel most attuned to?
+### Q: Which material best represents your state of mind?
 
-- Glass
-- Clay
-- Wood
-- Metal
+- Smooth glass
+- Hand-shaped clay
+- Aged wood
+- Forged metal
