@@ -111,13 +111,23 @@
       async function sendPrompt() {
         const prompt = document.getElementById("prompt").value;
         const persona = document.getElementById("persona").value;
-        if (!prompt) return;
-        await addDoc(collection(db, "prompts"), {
-          prompt,
-          persona,
-          timestamp: Date.now(),
-        });
-        alert("Prompt & Persona sent to Firebase!");
+        const name = document.getElementById("name").value;
+
+        if (!prompt || !name) return;
+
+        try {
+          await addDoc(collection(db, "prompts"), {
+            prompt,
+            persona,
+            name,
+            timestamp: Date.now(),
+          });
+
+          console.log("Prompt successfully submitted!");
+          // Optionally clear input fields here
+        } catch (error) {
+          console.error("Error adding document:", error);
+        }
       }
 
       window.sendPrompt = sendPrompt;
