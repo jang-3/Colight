@@ -32,7 +32,6 @@ body {
 }
 
 #pbody {
-  overflow-y: hidden;
   overflow-x: hidden;
   margin: none;
 }
