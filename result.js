@@ -18,7 +18,7 @@ const images = {
 const descriptions = {
   Hero_Holland: {
     description: `You are calm, grounded, and brave — not because fear doesn’t exist for you, but because you’ll choose to act through it. You’ll recognise that domestic violence isn’t always obvious, and you won’t look away when others stay silent. You’ll believe in caring out loud and stepping in safely, even when it’s difficult.`,
-    growth: `You can continue to grow by helping others learn how to support safely. You’ll be able to encourage your friends to speak up when something feels wrong, and guide them using the <a href="art.html" id="special">A.R.T. method</a>A.R.T. of Safe Interruption</a> — Approaching calmly, Responding with care, and Talking without blame. If someone is unsure how to help, you can share what’s worked for you. By modelling thoughtful action and empathy, you’ll become a steady influence in creating a safer, more caring community.`,
+    growth: `You can continue to grow by helping others learn how to support safely. You’ll be able to encourage your friends to speak up when something feels wrong, and guide them using the <a href="art.html" id="special">A.R.T. method</a> A.R.T. of Safe Interruption</a> — Approaching calmly, Responding with care, and Talking without blame. If someone is unsure how to help, you can share what’s worked for you. By modelling thoughtful action and empathy, you’ll become a steady influence in creating a safer, more caring community.`,
   },
 
   Indifferent_Irene: {
