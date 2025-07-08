@@ -85,6 +85,24 @@ body p {
   text-align: center;
 }
 
+#thanks {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  padding: 10px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 30px;
+  text-align: center;
+}
+
 .question {
   display: none;
 }
@@ -223,7 +241,8 @@ input[type="radio"] {
 }
 
 #homebtn3 {
-  width: 100px;
+  width: auto;
+  padding: 10px 30px;
   height: 60px;
   font-weight: normal;
   font-family: "Inter", sans-serif;
@@ -234,6 +253,8 @@ input[type="radio"] {
   background-color: black;
   color: white;
   margin: 5px;
+  text-wrap: nowrap;
+  margin-top: 15px;
 }
 
 #persona-select {

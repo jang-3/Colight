@@ -188,7 +188,7 @@ function cycleQuizStage(direction) {
 
   // Show current stage
   fullQuiz[currentStageIndex].style.display = "flex"; // or "block" if flex isn't needed
-  if (fullQuiz[currentStageIndex] === fullQuiz.length) {
+  if (currentStageIndex === fullQuiz.length - 1) {
     document.getElementById("sa").style.display = "none";
   }
 }
