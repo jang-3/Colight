@@ -63,7 +63,7 @@ async function loadQuestions() {
 function renderQuestion(container, question, choices, index, qType, embedUrl) {
   const div = document.createElement("div");
   div.classList.add("question");
-  div.innerHTML += `<div class="qnOptions titleQ"> <p style="margin-bottom: 20px; font-size: 15px;">Click 'Next' and 'Back' to cycle between question selections. Pick three questions to answer by submitting them.</p><h4 class="${qType} question-ask">${question}</h4> </div>`;
+  div.innerHTML += `<div class="qnOptions titleQ"> <p style="margin-bottom: 20px; font-size: 15px;">Click the arrows to cycle between question selections. Pick three questions to answer by submitting them. Remember to click "submit selfie" at the end!</p><h4 class="${qType} question-ask">${question}</h4> </div>`;
 
   if (choices.length > 0) {
     choices.forEach((choice, i) => {
